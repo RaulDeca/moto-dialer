@@ -17,7 +17,7 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("motocallrecorder.jks")
+            storeFile = file("../motocallrecorder.jks")
             storePassword = "android"
             keyAlias = "motocallrecorder"
             keyPassword = "android"
