@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme (blue) -->
+    <style name="Theme.MotoCallRecorder" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/blue_primary</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
+        <item name="colorAccent">@color/blue_accent</item>
+        <item name="colorControlActivated">@color/blue_accent</item>
+
+        <item name="surfaceColor">@color/surface_dark</item>
+        <item name="surfaceColorAlt">@color/surface_dark_alt</item>
+        <item name="cardColor">@color/card_dark</item>
+        <item name="textPrimary">@color/text_primary_dark</item>
+        <item name="textSecondary">@color/text_secondary_dark</item>
+        <item name="textMuted">@color/text_muted_dark</item>
+        <item name="dividerColor">@color/divider_dark</item>
+        <item name="dialerBtnColor">@color/surface_dark</item>
+        <item name="dialerBtnBorder">@color/divider_dark</item>
+
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+    </style>
+
+    <!-- Light theme (white + blue) -->
+    <style name="Theme.MotoCallRecorder.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue_primary</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
+        <item name="colorAccent">@color/blue_primary</item>
+        <item name="colorControlActivated">@color/blue_primary</item>
+
+        <item name="surfaceColor">@color/surface_light</item>
+        <item name="surfaceColorAlt">@color/surface_light_alt</item>
+        <item name="cardColor">@color/card_light</item>
+        <item name="textPrimary">@color/text_primary_light</item>
+        <item name="textSecondary">@color/text_secondary_light</item>
+        <item name="textMuted">@color/text_muted_light</item>
+        <item name="dividerColor">@color/divider_light</item>
+        <item name="dialerBtnColor">@color/surface_light</item>
+        <item name="dialerBtnBorder">@color/divider_light</item>
+
+        <item name="android:statusBarColor">@color/blue_primary</item>
+        <item name="android:navigationBarColor">@color/background_light</item>
+        <item name="android:windowBackground">@color/background_light</item>
+    </style>
+
+    <style name="DialerButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">?attr/textPrimary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lines">2</item>
+        <item name="android:lineSpacingExtra">-4dp</item>
+        <item name="android:background">@drawable/dialer_btn_bg</item>
+    </style>
+</resources>

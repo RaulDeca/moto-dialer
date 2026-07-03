@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_recents" android:icon="@drawable/ic_recents" android:title="Recents" />
+    <item android:id="@+id/nav_dialer" android:icon="@drawable/ic_dialer" android:title="Dialer" />
+    <item android:id="@+id/nav_contacts" android:icon="@drawable/ic_contacts" android:title="Contacts" />
+    <item android:id="@+id/nav_recordings" android:icon="@drawable/ic_notification_mic" android:title="Recordings" />
+</menu>

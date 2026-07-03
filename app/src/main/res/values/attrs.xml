@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="surfaceColor" format="color" />
+    <attr name="surfaceColorAlt" format="color" />
+    <attr name="cardColor" format="color" />
+    <attr name="textPrimary" format="color" />
+    <attr name="textSecondary" format="color" />
+    <attr name="textMuted" format="color" />
+    <attr name="dividerColor" format="color" />
+    <attr name="dialerBtnColor" format="color" />
+    <attr name="dialerBtnBorder" format="color" />
+</resources>

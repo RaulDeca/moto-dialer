@@ -1,0 +1,38 @@
+# Gradle
+.gradle/
+build/
+local.properties
+
+# Android
+*.iml
+.idea/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+release/
+
+# Keystore (DO NOT COMMIT)
+*.jks
+*.keystore
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# Generated files
+captures/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

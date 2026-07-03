@@ -1,0 +1,3 @@
+-keep class com.motocallrecorder.** { *; }
+-keepattributes *Annotation*
+-dontwarn android.**

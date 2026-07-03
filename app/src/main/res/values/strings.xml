@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Moto Call Recorder</string>
+    <string name="recording_enabled">Recording Enabled</string>
+    <string name="recording_disabled">Recording Disabled</string>
+    <string name="no_recordings">No recordings yet</string>
+    <string name="permission_required">Permissions required for call recording</string>
+</resources>
