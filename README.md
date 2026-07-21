@@ -118,4 +118,4 @@ Built and signed with the project's `motocallrecorder.jks` (storepass `android`,
 ---
 
 ## Credits
-Developed by **Siva** · sivagaff@gmail.com · github.com/sivateam007
+Developed by **Siva**  · github.com/sivateam007
