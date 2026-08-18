@@ -1,33 +1,28 @@
 name: Build Moto APK
 on:
-  workflow_dispatch:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
-
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-
-      - name: Build Release APK
-        run: ./gradlew assembleRelease --stacktrace
-
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug --stacktrace
       - name: Create Release
-        if: success()
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ github.run_number }}
           name: Moto v${{ github.run_number }}
-          files: app/build/outputs/apk/release/app-release.apk
+          files: app/build/outputs/apk/debug/app-debug.apk
