@@ -1,0 +1,50 @@
+name: Build Moto APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+  schedule:
+    # auto-check for upstream updates once a week
+    - cron: '0 0 * * 0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout your fork
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease --stacktrace
+
+      - name: Get version name
+        id: version
+        run: |
+          VER=$(date +'%Y.%m.%d')-${{ github.run_number }}
+          echo "version=$VER" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release with APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: Moto Call Recorder v${{ steps.version.outputs.version }}
+          files: app/build/outputs/apk/release/app-release.apk
+          body: |
+            Auto-built APK from sivateam007/moto-dialer
+            Built on ${{ steps.version.outputs.version }}
+            Original repo: https://github.com/sivateam007/moto-dialer
